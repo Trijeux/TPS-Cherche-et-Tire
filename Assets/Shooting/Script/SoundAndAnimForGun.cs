@@ -4,7 +4,7 @@ using StarterAssets;
 using TMPro;
 using UnityEngine;
 
-public class SoundForShoot : MonoBehaviour
+public class SoundAndAnimForShoot : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs _inputs;
     [SerializeField] private AudioSource _ShootingSource;

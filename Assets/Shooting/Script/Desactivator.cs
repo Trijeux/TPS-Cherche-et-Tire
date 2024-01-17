@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroyer : MonoBehaviour
+public class Desactivator : MonoBehaviour
 {
     [SerializeField] private ShootAllTarget _shootAllTarget;
+    [SerializeField] private LoseTarget _loseTarget;
     
     // Start is called before the first frame update
     void Start()
@@ -15,9 +16,10 @@ public class Destroyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_shootAllTarget._end)
+        if (_shootAllTarget._end || _loseTarget.TargetLoseIsDead)
         {
             gameObject.SetActive(false);
         }
+        
     }
 }

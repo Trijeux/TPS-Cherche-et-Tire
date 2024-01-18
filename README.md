@@ -2,7 +2,7 @@
 
 Controle :
 
-W / Left Stick Up = Forward
+W / Left Stick Up = Forward /n
 S / Left Stick Down = Backward
 A / Left Stick Left = Left
 D / Left Stick Right = Right

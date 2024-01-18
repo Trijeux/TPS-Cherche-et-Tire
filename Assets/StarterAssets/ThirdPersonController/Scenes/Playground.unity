@@ -5370,7 +5370,7 @@ GameObject:
   - component: {fileID: 1875198182}
   - component: {fileID: 1875198181}
   m_Layer: 5
-  m_Name: MusiqueBackGoundAutor
+  m_Name: MusiqueBackGroundAutor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5442,7 +5442,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Musique de Back Gound Cr\xE9er par Vivziepop sur Youtube"
+  m_Text: "Musique de Back Ground Cr\xE9\xE9 par Vivziepop sur Youtube"
 --- !u!222 &1875198183
 CanvasRenderer:
   m_ObjectHideFlags: 0

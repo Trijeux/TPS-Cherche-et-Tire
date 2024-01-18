@@ -26,6 +26,7 @@ public class ShootingSysteme : MonoBehaviour
     public bool _wasShot;
     public int _ammo;
     public int _ammoMax = 12;
+    private int ImageNum = 1;
 
     //[SerializeField] private Vector3 _ammoPhysiquePosInit;
 
@@ -111,5 +112,9 @@ public class ShootingSysteme : MonoBehaviour
 
         _ammoText.text = _ammo.ToString();
         _maxAmmoText.text = _ammoMax.ToString();
+        
+        
+        //ScreenCapture.CaptureScreenshot("MyCapture(" + ImageNum + ").png");
+        //ImageNum++;
     }
 }

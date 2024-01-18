@@ -2,17 +2,17 @@
 
 Controle :
 
-W / Left Stick Up = Forward /n
-S / Left Stick Down = Backward
-A / Left Stick Left = Left
-D / Left Stick Right = Right
+W / Left Stick Up = Forward  
+S / Left Stick Down = Backward  
+A / Left Stick Left = Left  
+D / Left Stick Right = Right  
 
-Mouse Up / Right Stick Up = Up Cam
-Mouse Down / Right Stick Down = Down Cam
-Mouse Left / Right Stick Left = Left Cam
-Mouse Right / Right Stick Right = Right Cam
+Mouse Up / Right Stick Up = Up Cam  
+Mouse Down / Right Stick Down = Down Cam  
+Mouse Left / Right Stick Left = Left Cam  
+Mouse Right / Right Stick Right = Right Cam  
 
-Left Click / Left Down Trigger = Aiming
-Right Click / Right Down Trigger = Shooting
+Left Click / Left Down Trigger = Aiming  
+Right Click / Right Down Trigger = Shooting  
 
-Shift / Right Button = Sprint
+Shift / Right Button = Sprint  

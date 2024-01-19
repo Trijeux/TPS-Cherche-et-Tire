@@ -12,11 +12,6 @@ public class SoundForMove : MonoBehaviour
     [SerializeField] private AudioSource _sprintAudioSource;
     [SerializeField] private bool _inWalk;
     [SerializeField] private bool _inSprint;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()

@@ -15,12 +15,6 @@ public class SoundAndAnimForShoot : MonoBehaviour
     [SerializeField] private ShootingSysteme _shootingSysteme;
     [SerializeField] private bool _wasShotForSong;
     [SerializeField] private bool _ammoForSong;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        //_ShootingSource = GetComponent<AudioSource>();
-    }
 
     // Update is called once per frame
     void Update()

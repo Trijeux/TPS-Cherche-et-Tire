@@ -21,14 +21,11 @@ public class ShootingSysteme : MonoBehaviour
     [SerializeField] private Transform _CursorTransf;
 
     [SerializeField] private CinemachineVirtualCamera CameraV;
-    //[SerializeField] private GameObject _ammoPhysique;
     
     public bool _wasShot;
     public int _ammo;
     public int _ammoMax = 12;
-    private int ImageNum = 1;
-
-    //[SerializeField] private Vector3 _ammoPhysiquePosInit;
+    
 
     private StarterAssetsInputs _input;
     private Camera _mainCamera;
@@ -62,7 +59,6 @@ public class ShootingSysteme : MonoBehaviour
 
                 if (_input.isShot && _input.isAiming && _ammo > 0)
                 {
-                    //_shootingTarget.SetActive(true);
                     _shootingOrigin.SetActive(true);
                     Vector3 forw = this.transform.forward;
 
@@ -70,9 +66,7 @@ public class ShootingSysteme : MonoBehaviour
                     if (Physics.Raycast(ray, out RaycastHit hitInfo, _maxShootDistance))
                     {
                         Debug.Log(hitInfo.collider.gameObject.name);
-
-                        //_shootingTarget.transform.position = hitInfo.point;
-                        //if (_input.isShot)
+                        
                         if (hitInfo.collider.gameObject.tag != "Shoot")
                         {
                             Instantiate(_impact, hitInfo.point, Quaternion.identity);
@@ -84,17 +78,12 @@ public class ShootingSysteme : MonoBehaviour
                 }
                 else
                 {
-                    //_shootingTarget.SetActive(false);
                     _shootingOrigin.SetActive(false);
-                    //_shootingTarget.transform.position = _originCamera;
-
-                    //_ammoPhysique.transform.position = _ammoPhysiquePosInit;
                 }
             }
             else if (_wasShot && !_input.isShot)
             {
                 _wasShot = false;
-                //_shootingTarget.SetActive(false);
                 _shootingOrigin.SetActive(false);
             }
         }
@@ -112,9 +101,5 @@ public class ShootingSysteme : MonoBehaviour
 
         _ammoText.text = _ammo.ToString();
         _maxAmmoText.text = _ammoMax.ToString();
-        
-        
-        //ScreenCapture.CaptureScreenshot("MyCapture(" + ImageNum + ").png");
-        //ImageNum++;
     }
 }

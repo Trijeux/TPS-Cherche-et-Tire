@@ -14,13 +14,6 @@ public class EndScript : MonoBehaviour
     [SerializeField] private AudioSource  _perduAudioSource;
     [SerializeField] private bool _songOn;
     [SerializeField] private GameObject _rabbitIsDeadGameObject;
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

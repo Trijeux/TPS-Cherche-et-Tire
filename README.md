@@ -1,17 +1,18 @@
 # TPS-Cherche-et-Tire
 
 Controle :
-W / Left Stick Up = Forward
-S / Left Stick Down = Backward
-A / Left Stick Left = Left
-D / Left Stick Right = Right
 
-Mouse Up / Right Stick Up = Up Cam
-Mouse Down / Right Stick Down = Down Cam
-Mouse Left / Right Stick Left = Left Cam
-Mouse Right / Right Stick Right = Right Cam
+W / Left Stick Up = Forward  
+S / Left Stick Down = Backward  
+A / Left Stick Left = Left  
+D / Left Stick Right = Right  
 
-Left Click / Left Down Trigger = Aiming
-Right Click / Right Down Trigger = Shooting
+Mouse Up / Right Stick Up = Up Cam  
+Mouse Down / Right Stick Down = Down Cam  
+Mouse Left / Right Stick Left = Left Cam  
+Mouse Right / Right Stick Right = Right Cam  
 
-Shift / Right Button = Sprint
+Left Click / Left Down Trigger = Aiming  
+Right Click / Right Down Trigger = Shooting  
+
+Shift / Right Button = Sprint  

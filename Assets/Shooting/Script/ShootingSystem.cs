@@ -20,7 +20,7 @@ public class ShootingSysteme : MonoBehaviour
     [SerializeField] private Text _ammoText;
     [SerializeField] private Transform _CursorTransf;
 
-    [SerializeField] private CinemachineVirtualCamera CameraV;
+    [FormerlySerializedAs("CameraV")] [SerializeField] private CinemachineVirtualCamera _cameraV;
     
     public bool _wasShot;
     public int _ammo;
@@ -62,7 +62,7 @@ public class ShootingSysteme : MonoBehaviour
                     _shootingOrigin.SetActive(true);
                     Vector3 forw = this.transform.forward;
 
-                    Debug.DrawRay(ray.origin, CameraV.transform.forward * _maxShootDistance, Color.red, 0.5f);
+                    Debug.DrawRay(ray.origin, _cameraV.transform.forward * _maxShootDistance, Color.red, 0.5f);
                     if (Physics.Raycast(ray, out RaycastHit hitInfo, _maxShootDistance))
                     {
                         Debug.Log(hitInfo.collider.gameObject.name);

@@ -103,9 +103,6 @@ namespace StarterAssets
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
         private int _animIDAimGun;
-        // private int _animIDAimForGun;
-        // private int _animIDWalkForGun;
-        // private int _animIDRunForGun;
         private int _animIDFire;
         private int _animIDReload;
         
@@ -118,7 +115,6 @@ namespace StarterAssets
         private PlayerInput _playerInput;
 #endif
         [SerializeField] private Animator _animatorForPlayer;
-        // [SerializeField] private Animator _animatorForGun;
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
@@ -194,9 +190,6 @@ namespace StarterAssets
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
             _animIDAimGun = Animator.StringToHash("AimGun");
-            // _animIDAimForGun = Animator.StringToHash("AimForGun");
-            // _animIDWalkForGun = Animator.StringToHash("WalkForGun");
-            // _animIDRunForGun = Animator.StringToHash("RunForGun");
             _animIDFire = Animator.StringToHash("Fire");
             _animIDReload = Animator.StringToHash("Reload");
         }
@@ -226,7 +219,6 @@ namespace StarterAssets
             if (_input.isAiming)
             {
                 _animatorForPlayer.SetBool(_animIDAimGun, true);
-                //_animatorForGun.SetBool(_animIDAimForGun, true);
                 if (_input.isShot && _shootingSysteme._ammo > 0 && !_wasShotForAnim)
                 {
                     _animatorForPlayer.SetBool(_animIDFire, true);
@@ -241,27 +233,8 @@ namespace StarterAssets
             else
             {
                 _animatorForPlayer.SetBool(_animIDAimGun, false);
-                //_animatorForGun.SetBool(_animIDAimForGun, false);
                 _animatorForPlayer.SetBool(_animIDFire, false);
             }
-            
-            // if (_speed >= 0.1f && !_input.sprint && !_input.isAiming)
-            // {
-            //     _animatorForGun.SetBool(_animIDWalkForGun, true);
-            // }
-            // else
-            // {
-            //     _animatorForGun.SetBool(_animIDWalkForGun, false);
-            // }
-
-            // if (_input.sprint && _speed >= 2.1f)
-            // {
-            //     _animatorForGun.SetBool(_animIDRunForGun, true);
-            // }
-            // else
-            // {
-            //     _animatorForGun.SetBool(_animIDRunForGun, false);
-            // }
 
             if (_input.isReaload && _ammoForAnim)
             {
@@ -356,31 +329,7 @@ namespace StarterAssets
             // make the player strife while aiming/shooting
             targetDirection = _input.move.x * transform.right + _input.move.y * transform.forward;
             
-            // if (_input.move != Vector2.zero && !_input.isAiming && !_input.isShot)
-            // {
-            //     // _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + _mainCamera.transform.eulerAngles.y;
-            //     // float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
-            //     //
-            //     // // rotate to face input direction relative to camera position
-            //     // transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-            //     //
-            //     // // make the player walk normaly
-            //     // targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-            // }
-            // else if(_input.isAiming || _input.isShot)
-            // {
-            //     // make the player look in the direction of the camera
-            //     _targetRotation = _mainCamera.transform.eulerAngles.y;
-            //     float rotation = _targetRotation;
-            //
-            //     // rotate to face input direction relative to camera position
-            //     transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-            //
-            //     // make the player strife while aiming/shooting
-            //     targetDirection = _input.move.x * transform.right + _input.move.y * transform.forward; 
-            // }
-
-
+            
             // move the player
             _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
@@ -399,13 +348,6 @@ namespace StarterAssets
             {
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
-
-                // update animator if using character
-                // if (_hasAnimator)
-                // {
-                //     _animatorForPlayer.SetBool(_animIDJump, false);
-                //     _animatorForPlayer.SetBool(_animIDFreeFall, false);
-                // }
 
                 // stop our velocity dropping infinitely when grounded
                 if (_verticalVelocity < 0.0f)

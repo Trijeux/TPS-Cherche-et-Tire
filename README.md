@@ -16,3 +16,4 @@ Left Click / Left Down Trigger = Aiming
 Right Click / Right Down Trigger = Shooting  
 
 Shift / Right Button = Sprint  
+R / Left Button = Reload
